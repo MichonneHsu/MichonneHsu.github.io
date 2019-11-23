@@ -5,12 +5,12 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://yoursite.com">
+  <link rel="dns-prefetch" href="https://michonnehsu.github.io">
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;michonnehsu.github.io&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
@@ -41,11 +41,11 @@
 <div class="overlay" style="background: #4d4d4d"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
-		<a href="/" class="profilepic">
+		<a href="/blog/" class="profilepic">
 			<img src="/img/20135675.jfif" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">Michonne Hsu</a></h1>
+		  <h1 class="header-author"><a href="/blog/">Michonne Hsu</a></h1>
 		</hgroup>
 		
 
@@ -126,6 +126,83 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-mysql-多集合检索技巧" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/23/mysql-%E5%A4%9A%E9%9B%86%E5%90%88%E6%A3%80%E7%B4%A2%E6%8A%80%E5%B7%A7/">mysql 多集合检索技巧以及数据库查询优化小技巧</a>
+    </h1>
+  
+
+        
+        <a href="/2019/11/23/mysql-%E5%A4%9A%E9%9B%86%E5%90%88%E6%A3%80%E7%B4%A2%E6%8A%80%E5%B7%A7/" class="archive-article-date">
+  	<time datetime="2019-11-23T13:41:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="find-in-set"><a href="#find-in-set" class="headerlink" title="find_in_set"></a>find_in_set</h2><p>find in set  中文翻译就是在集合里找。</p>
+<p>假设一个path字段里存放着  1,2,3 这种字符串类型的值<br>假设有三条数据他们的path字段里有 1,3  1,2  2,3</p>
+<p>我在查询语句里写select find_in_set(3,path) from xxx;<br>查到的结果两个；分别是 1,3 和 2,3</p>
+<p>说道数据库查询优化最好的办法就是让计算机能直接读懂代码，比如我要查时间   一般来说最好给时间戳去查找。<br>如果是多条件查询的话，在多个条件里第一位条件查询语句优先时间戳 select * from xxx where create_time = 10000000 …其他条件<br>这样的查询会比以往快很多，还有就是要给关键的字段附上key 一般来说 可以赋给 id create_time type name 等等。这样可以加快查询速度。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">mysql php</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/23/mysql-%E5%A4%9A%E9%9B%86%E5%90%88%E6%A3%80%E7%B4%A2%E6%8A%80%E5%B7%A7/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-我的第一篇hexo博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
