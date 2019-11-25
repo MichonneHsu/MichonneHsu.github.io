@@ -157,7 +157,7 @@
         <h2 id="find-in-set"><a href="#find-in-set" class="headerlink" title="find_in_set"></a>find_in_set</h2><p>find in set  中文翻译就是在集合里找。</p>
 <p>假设一个path字段里存放着  1,2,3 这种字符串类型的值<br>假设有三条数据他们的path字段里有 1,3  1,2  2,3</p>
 <p>我在查询语句里写select find_in_set(3,path) from xxx;<br>查到的结果两个；分别是 1,3 和 2,3</p>
-<p>说道数据库查询优化最好的办法就是让计算机能直接读懂代码，比如我要查时间   一般来说最好给时间戳去查找。<br>如果是多条件查询的话，在多个条件里第一位条件查询语句优先时间戳 select * from xxx where create_time = 10000000 …其他条件<br>这样的查询会比以往快很多，还有就是要给关键的字段附上key 一般来说 可以赋给 id create_time type name 等等。这样可以加快查询速度。</p>
+<p>说到数据库查询优化最好的办法就是让计算机能直接读懂代码，比如我要查时间   一般来说最好给时间戳去查找。<br>如果是多条件查询的话，在多个条件里第一位条件查询语句优先时间戳 select * from xxx where create_time = 10000000 …其他条件<br>这样的查询会比以往快很多，还有就是要给关键的字段附上key 一般来说 可以赋给 id create_time type name 等等。这样可以加快查询速度。</p>
 
       
 
