@@ -134,6 +134,91 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-centos7-php-安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/27/centos7-php-%E5%AE%89%E8%A3%85/">centos7 php 安装</a>
+    </h1>
+  
+
+        
+        <a href="/2019/11/27/centos7-php-%E5%AE%89%E8%A3%85/" class="archive-article-date">
+  	<time datetime="2019-11-27T11:39:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="centos-版本的linux-安装php环境"><a href="#centos-版本的linux-安装php环境" class="headerlink" title="centos 版本的linux 安装php环境"></a>centos 版本的linux 安装php环境</h1><p>如果以前没有安装php环境或者是不确定有没有安装过php环境<br>输入 命令尝试移除：yum remove php*</p>
+<h1 id="运行命令前，请将-lt-版本号-gt-替换为当前可用的版本号。"><a href="#运行命令前，请将-lt-版本号-gt-替换为当前可用的版本号。" class="headerlink" title="运行命令前，请将&lt;版本号&gt;替换为当前可用的版本号。"></a>运行命令前，请将&lt;版本号&gt;替换为当前可用的版本号。</h1><p>yum install -y <a href="http://dl.iuscommunity.org/pub/ius/stable/CentOS/7/x86_64/ius-release-" target="_blank" rel="noopener">http://dl.iuscommunity.org/pub/ius/stable/CentOS/7/x86_64/ius-release-</a>&lt;版本号&gt;.ius.centos7.noarch.rpm</p>
+<p>访问ius community网站。</p>
+<p>在搜索框中输入ius-release<br>选择带有centos7的版本。红框中的内容即为可用的版本号，<br>ctrl+f 输入ius查找<br>选择最新版本</p>
+<p>运行以下命令添加Webtatic源<br>rpm -Uvh <a href="https://mirror.webtatic.com/yum/el7/webtatic-release.rpm" target="_blank" rel="noopener">https://mirror.webtatic.com/yum/el7/webtatic-release.rpm</a></p>
+<p>yum provides php<br>查看可用的php版本有哪些</p>
+<p>安装php环境</p>
+<p>yum install -y php73-php-fpm php73-php-cli php73-php-bcmath php73-php-gd php73-php-json php73-php-mbstring php73-php-mcrypt php73-php-mysqlnd php73-php-opcache php73-php-pdo php73-php-pecl-crypto php73-php-pecl-mcrypt php73-php-pecl-geoip php73-php-recode php73-php-snmp php73-php-soap php73-php-xml</p>
+<p>systemctl enable php73-php-fpm 激活php服务端口</p>
+<p>systemctl start php73-php-fpm 启动php服务端口</p>
+<p>重启服务器（霸王硬上弓式重启服务器）</p>
+<p>服务启动后 输入命令  php -v 查看能否显示出php版本，没有显示表示php环境未安装成功。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">centos7 php安装</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/27/centos7-php-%E5%AE%89%E8%A3%85/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-mysql-多集合检索技巧" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

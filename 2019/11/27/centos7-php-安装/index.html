@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://michonnehsu.github.io">
-  <title>mysql 多集合检索技巧以及数据库查询优化小技巧 | Michonne Hsu&#39;s programming tips</title>
+  <title>centos7 php 安装 | Michonne Hsu&#39;s programming tips</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="find_in_setfind in set  中文翻译就是在集合里找。 假设一个path字段里存放着  1,2,3 这种字符串类型的值假设有三条数据他们的path字段里有 1,3  1,2  2,3 我在查询语句里写select find_in_set(3,path) from xxx;查到的结果两个；分别是 1,3 和 2,3 说到数据库查询优化最好的办法就是让计算机能直接读懂代码，比如我要查">
-<meta name="keywords" content="mysql php">
+  <meta name="description" content="centos 版本的linux 安装php环境如果以前没有安装php环境或者是不确定有没有安装过php环境输入 命令尝试移除：yum remove php* 运行命令前，请将&amp;lt;版本号&amp;gt;替换为当前可用的版本号。yum install -y http:&#x2F;&#x2F;dl.iuscommunity.org&#x2F;pub&#x2F;ius&#x2F;stable&#x2F;CentOS&#x2F;7&#x2F;x86_64&#x2F;ius-release-&amp;lt;版">
+<meta name="keywords" content="centos7 php安装">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mysql 多集合检索技巧以及数据库查询优化小技巧">
-<meta property="og:url" content="https:&#x2F;&#x2F;michonnehsu.github.io&#x2F;2019&#x2F;11&#x2F;23&#x2F;mysql-%E5%A4%9A%E9%9B%86%E5%90%88%E6%A3%80%E7%B4%A2%E6%8A%80%E5%B7%A7&#x2F;index.html">
+<meta property="og:title" content="centos7 php 安装">
+<meta property="og:url" content="https:&#x2F;&#x2F;michonnehsu.github.io&#x2F;2019&#x2F;11&#x2F;27&#x2F;centos7-php-%E5%AE%89%E8%A3%85&#x2F;index.html">
 <meta property="og:site_name" content="Michonne Hsu&#39;s programming tips">
-<meta property="og:description" content="find_in_setfind in set  中文翻译就是在集合里找。 假设一个path字段里存放着  1,2,3 这种字符串类型的值假设有三条数据他们的path字段里有 1,3  1,2  2,3 我在查询语句里写select find_in_set(3,path) from xxx;查到的结果两个；分别是 1,3 和 2,3 说到数据库查询优化最好的办法就是让计算机能直接读懂代码，比如我要查">
+<meta property="og:description" content="centos 版本的linux 安装php环境如果以前没有安装php环境或者是不确定有没有安装过php环境输入 命令尝试移除：yum remove php* 运行命令前，请将&amp;lt;版本号&amp;gt;替换为当前可用的版本号。yum install -y http:&#x2F;&#x2F;dl.iuscommunity.org&#x2F;pub&#x2F;ius&#x2F;stable&#x2F;CentOS&#x2F;7&#x2F;x86_64&#x2F;ius-release-&amp;lt;版">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-25T07:10:39.846Z">
+<meta property="og:updated_time" content="2019-11-27T13:12:11.053Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Michonne Hsu&#39;s programming tips" type="application/atom+xml">
@@ -133,30 +133,38 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-mysql-多集合检索技巧" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-centos7-php-安装" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      mysql 多集合检索技巧以及数据库查询优化小技巧
+      centos7 php 安装
     </h1>
   
 
         
-        <a href="/2019/11/23/mysql-%E5%A4%9A%E9%9B%86%E5%90%88%E6%A3%80%E7%B4%A2%E6%8A%80%E5%B7%A7/" class="archive-article-date">
-  	<time datetime="2019-11-23T13:41:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-23</time>
+        <a href="/2019/11/27/centos7-php-%E5%AE%89%E8%A3%85/" class="archive-article-date">
+  	<time datetime="2019-11-27T11:39:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="find-in-set"><a href="#find-in-set" class="headerlink" title="find_in_set"></a>find_in_set</h2><p>find in set  中文翻译就是在集合里找。</p>
-<p>假设一个path字段里存放着  1,2,3 这种字符串类型的值<br>假设有三条数据他们的path字段里有 1,3  1,2  2,3</p>
-<p>我在查询语句里写select find_in_set(3,path) from xxx;<br>查到的结果两个；分别是 1,3 和 2,3</p>
-<p>说到数据库查询优化最好的办法就是让计算机能直接读懂代码，比如我要查时间   一般来说最好给时间戳去查找。<br>如果是多条件查询的话，在多个条件里第一位条件查询语句优先时间戳 select * from xxx where create_time = 10000000 …其他条件<br>这样的查询会比以往快很多，还有就是要给关键的字段附上key 一般来说 可以赋给 id create_time type name 等等。这样可以加快查询速度。</p>
+        <h1 id="centos-版本的linux-安装php环境"><a href="#centos-版本的linux-安装php环境" class="headerlink" title="centos 版本的linux 安装php环境"></a>centos 版本的linux 安装php环境</h1><p>如果以前没有安装php环境或者是不确定有没有安装过php环境<br>输入 命令尝试移除：yum remove php*</p>
+<h1 id="运行命令前，请将-lt-版本号-gt-替换为当前可用的版本号。"><a href="#运行命令前，请将-lt-版本号-gt-替换为当前可用的版本号。" class="headerlink" title="运行命令前，请将&lt;版本号&gt;替换为当前可用的版本号。"></a>运行命令前，请将&lt;版本号&gt;替换为当前可用的版本号。</h1><p>yum install -y <a href="http://dl.iuscommunity.org/pub/ius/stable/CentOS/7/x86_64/ius-release-" target="_blank" rel="noopener">http://dl.iuscommunity.org/pub/ius/stable/CentOS/7/x86_64/ius-release-</a>&lt;版本号&gt;.ius.centos7.noarch.rpm</p>
+<p>访问ius community网站。</p>
+<p>在搜索框中输入ius-release<br>选择带有centos7的版本。红框中的内容即为可用的版本号，<br>ctrl+f 输入ius查找<br>选择最新版本</p>
+<p>运行以下命令添加Webtatic源<br>rpm -Uvh <a href="https://mirror.webtatic.com/yum/el7/webtatic-release.rpm" target="_blank" rel="noopener">https://mirror.webtatic.com/yum/el7/webtatic-release.rpm</a></p>
+<p>yum provides php<br>查看可用的php版本有哪些</p>
+<p>安装php环境</p>
+<p>yum install -y php73-php-fpm php73-php-cli php73-php-bcmath php73-php-gd php73-php-json php73-php-mbstring php73-php-mcrypt php73-php-mysqlnd php73-php-opcache php73-php-pdo php73-php-pecl-crypto php73-php-pecl-mcrypt php73-php-pecl-geoip php73-php-recode php73-php-snmp php73-php-soap php73-php-xml</p>
+<p>systemctl enable php73-php-fpm 激活php服务端口</p>
+<p>systemctl start php73-php-fpm 启动php服务端口</p>
+<p>重启服务器（霸王硬上弓式重启服务器）</p>
+<p>服务启动后 输入命令  php -v 查看能否显示出php版本，没有显示表示php环境未安装成功。</p>
 
       
 
@@ -170,7 +178,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">mysql php</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">centos7 php安装</a>
         		</li>
       		
 		</ul>
@@ -189,18 +197,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/27/centos7-php-%E5%AE%89%E8%A3%85/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          centos7 php 安装
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/11/18/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87hexo%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">我的第一篇hexo博客</div>
+    <a href="/2019/11/23/mysql-%E5%A4%9A%E9%9B%86%E5%90%88%E6%A3%80%E7%B4%A2%E6%8A%80%E5%B7%A7/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">mysql 多集合检索技巧以及数据库查询优化小技巧</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -230,7 +229,7 @@
   
 
   
-  <div id="SOHUCS" sid="mysql-多集合检索技巧" ></div> 
+  <div id="SOHUCS" sid="centos7-php-安装" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
